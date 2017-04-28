@@ -2,3 +2,13 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
+
+logging.level:
+  org.springframework.boot.web: WARN
+  org.springframework.boot.context: WARN
+  org.springframework.web: WARN
+  org.springframework.orm: WARN
+  org.springframework.core: WARN
+  org.springframework.jmx: WARN
+  org.hibernate: WARN
+  org.apache.catalina: WARN

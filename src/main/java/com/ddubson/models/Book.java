@@ -2,10 +2,7 @@ package com.ddubson.models;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "books")
@@ -14,5 +11,10 @@ public class Book {
     @Id
     @GeneratedValue
     private Long id;
+
     private String title;
+
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private Author author;
 }
