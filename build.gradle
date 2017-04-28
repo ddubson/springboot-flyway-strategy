@@ -1,0 +1,37 @@
+
+buildscript {
+    ext {
+        springBootVersion = "1.5.3.RELEASE"
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    }
+}
+
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web:1.5.3.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa:1.5.3.RELEASE'
+    compile "org.projectlombok:lombok:1.16.16"
+    compile 'mysql:mysql-connector-java:5.1.41'
+    compile "org.flywaydb:flyway-core:4.2.0"
+
+    testCompile 'junit:junit:4.12'
+}
+

@@ -1,0 +1,14 @@
+# Dev Environment properties
+# WARNING: NEVER EVER store credentials in the code base. This is a demo only!
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/library
+    username: root
+    password: root
+
+server:
+  port: 9000
+
+flyway:
+  locations: classpath:/db/migration/schema, classpath:/db/migration/data/dev
+
