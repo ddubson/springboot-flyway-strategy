@@ -1,19 +1,33 @@
 # Spring Boot Flyway Strategy
 
-Flyway Schema migrations:
+Flyway Schema migrations for all environments:
 
 ```
 src/main/resources/db/migration/schema
 ```
 
-Data migrations for dev environment
+Data migrations for dev environment only
 ```
 src/main/resources/db/migration/data/dev
 ```
 
-Data migrations for prod environment
+Data migrations for prod environment only
 ```
 src/main/resources/db/migration/data/prod
+```
+
+# Running the app
+
+In DEV mode (executes schema + dev migrations):
+
+```bash
+./gradlew bootRun -Pargs=--spring.profiles.active=dev
+```
+
+In PROD mode (executes schema + prod migrations):
+
+```bash
+./gradlew bootRun -Pargs=--spring.profiles.active=prod
 ```
 
 ## Strategy
@@ -46,4 +60,4 @@ e.g.
 > Order of execution will be:
 >   V1 -> V1_1 -> V2 for both `dev` and `prod` environments
 
-This is a very granular but efffective approach to schema/data migrations using flyway
+This is a very granular but effective approach to schema/data migrations using flyway

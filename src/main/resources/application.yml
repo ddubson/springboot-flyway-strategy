@@ -1,8 +1,4 @@
 # Common Properties shared across environments
-spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-
 logging.level:
   org.springframework.boot.web: WARN
   org.springframework.boot.context: WARN

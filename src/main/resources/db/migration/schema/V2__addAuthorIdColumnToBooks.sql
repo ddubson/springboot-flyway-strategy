@@ -1,1 +1,1 @@
-ALTER TABLE books ADD COLUMN author_id int AFTER title;
+ALTER TABLE books ADD COLUMN author_id bigint AFTER title;
