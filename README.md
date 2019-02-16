@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ddubson/springboot-flyway-strategy.svg?branch=master)](https://travis-ci.org/ddubson/springboot-flyway-strategy)
+
 # Spring Boot Flyway Strategy
 
 Flyway Schema migrations for all environments:

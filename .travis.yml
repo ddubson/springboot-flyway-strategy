@@ -1,0 +1,9 @@
+language: java
+jdk: openjdk8
+before_install:
+  - echo "skip assemble"
+  - chmod +x gradlew
+install:
+  - echo "skip assemble"
+script:
+  - ./gradlew clean test

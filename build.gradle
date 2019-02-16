@@ -29,5 +29,7 @@ dependencies {
 
     // Add Flyway as a dependency to make Spring Boot recognize it
     runtime "org.flywaydb:flyway-core:5.2.4"
+
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
 }
 
